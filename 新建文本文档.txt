@@ -1,0 +1,6 @@
+1：list页面增加分类显示
+2：留言回复实现异步化
+	2.1：comment.save路由取消跳转movies/id页面，同时在detail.jade页面中加入JQ的ajax异步函数从comment数据库获取相关数据，问题：看是否为先存储数据然后ajax访问数据库
+	2.2：comment.save路由取消跳转movies/id页面，同时在detail.jade页面中假如JQ的ajax异步函数从comment数据库获取相关数据，并且为ajax访问的路由设置中间件，中间件为将detail.jade页面中提交过来的数据存储到comment数据库中
+
+3：联想：是否弹幕就是在异步刷新时只从数据库中取出当前数据（比如每1000ms向数据库中取出第一条数据并显示）
